@@ -1,24 +1,30 @@
-//classes
+// adicione a classe ativo a todos os itens do menu
 
-const menu = document.querySelector('.menu');
+const itensMenu = document.querySelectorAll('.menu a')
 
-menu.classList.add('ativo', 'teste');
-menu.classList.remove('azul');
-menu.classList.toggle('azul');
+itensMenu.forEach((item) => {
+    item.classList.add('ativo')
+})
 
-if(menu.classList.contains('azul')){
-  menu.classList.add('possui-azul');
-}else {
-  menu.classList.add('nao-possui-azul')
-}
 
-menu.className += ' vermelho';
+// Remova a classe ativo de todos os itens do menu e mantenha apenas no primeiro
 
-// atributtes
+itensMenu.forEach((item) => {
+    item.classList.remove('ativo')
+});
 
-const animais = document.querySelector('.animais')
-console.log(animais.attributes)
+itensMenu[0].classList.add('ativo')
 
-const img = document.querySelector('img');
-console.log(img.getAttribute('src'))
+// verifique se as imagens possuem o atributo alt
 
+const imagens = document.querySelectorAll('img')
+
+imagens.forEach((item) => {
+    const altImg = item.hasAttribute('alt')
+    console.log(item, altImg)
+})
+
+// modifique o href do link externo do menu
+
+// const link = document.querySelector('a[href^="http"]');
+// link.setAttribute('href', 'https://www.google.com/')
