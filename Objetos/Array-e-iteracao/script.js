@@ -57,3 +57,30 @@ const arrayNomeAulas = aulas.map(nomeAulas)
 
 console.log(arrayNomeAulas)
 console.log(tempoAulas);
+
+const aulas2 = [10, 25, 30]; 
+
+const reduceAulas = aulas2.reduce((acumulador, item) => {
+  return acumulador + item
+}, 0)
+
+console.log(reduceAulas);
+
+const numeros2  = [2, 40, 13, 22, 37]
+
+const maiorNumero = numeros2.reduce((acumulador, item) => {
+  if(acumulador > item) {
+    return acumulador;
+  } else {
+    return item;
+  }
+})
+
+console.log(maiorNumero)
+
+const listaAulas = aulas.reduce((acumulador, item, index) => {
+  acumulador[index] = item.nome;
+  return acumulador;
+}, {})
+
+console.log(listaAulas)
