@@ -102,3 +102,11 @@ const every = frutas.every((item) => {
 })
 
 console.log(every)
+
+// find 
+
+const indexUva = frutas.findIndex((item) => { 
+  return item == 'Uva'
+})
+
+console.log('index:',indexUva)
