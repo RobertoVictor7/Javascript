@@ -1,128 +1,73 @@
-const carros = ['Ford', 'Fiat', 'Honda'];
+// Selecione cada curso e retorne uma array
+// com objetos contendo o título, descricao,
+// aulas e horas de cada curso
 
-// forEach
+const cursos = document.querySelectorAll('.curso');
+const arrayCursos = Array.from(cursos)
 
-carros.forEach(function (item, index, array) {
-  console.log(item.toUpperCase(), index, array);
+const objetoCurso = arrayCursos.map((item) => {
+    const titulo = item.querySelector('h1').innerText;
+    const descricao = item.querySelector('p').innerText;
+    const aulas = item.querySelector('.aulas').innerText;
+    const horas = item.querySelector('.horas').innerText;
+    return {
+        titulo: titulo,
+        descricao: descricao,
+        aulas: aulas,
+        horas: horas,
+    }
+})
+
+console.log(objetoCurso)
+
+// Retorne uma lista com os
+// números maiores que 100
+const numeros = [3, 44, 333, 23, 122, 322, 33];
+
+const maiorCem = numeros.filter((item) => {
+    return item > 100
+})
+
+console.log(maiorCem)
+
+// Verifique se Baixo faz parte
+// da lista de instrumentos e retorne true
+const instrumentos = ['Guitarra', 'Baixo', 'Bateria', 'Teclado']
+
+const fazParte = instrumentos.some((item) => {
+    return item === 'Baixo'
 });
 
-
-const li = document.querySelectorAll('li');
-li.forEach(i => i.classList.add('ativa'));
-
-// Map
-
-const novaArray = carros.map((item, index, array) => {
-    console.log(item.toUpperCase(), index, array);
-    return item.toUpperCase();
-})
-
-const numeros = [2, 4, 5, 6, 78];
-
-const numerosX2 = numeros.map(item => {
-    return item * 2
-})
+console.log(fazParte)
 
 
-console.log(numerosX2)
-console.log(novaArray)
-
-const aulas = [
+// Retorne o valor total das compras
+const compras = [
   {
-    nome: 'HTML 1',
-    min: 15
+    item: 'Banana',
+    preco: 'R$ 4,99'
   },
   {
-    nome: 'HTML 2',
-    min: 10
+    item: 'Ovo',
+    preco: 'R$ 2,99'
   },
   {
-    nome: 'CSS 1',
-    min: 20
+    item: 'Carne',
+    preco: 'R$ 25,49'
   },
   {
-    nome: 'JS 1',
-    min: 25
+    item: 'Refrigerante',
+    preco: 'R$ 5,35'
   },
+  {
+    item: 'Quejo',
+    preco: 'R$ 10,60'
+  }
 ]
 
-
-const tempoAulas = aulas.map(item => item.min);
-
-function nomeAulas(aula) {
-  return aula.nome;
-}
-
-const arrayNomeAulas = aulas.map(nomeAulas)
-
-console.log(arrayNomeAulas)
-console.log(tempoAulas);
-
-const aulas2 = [10, 25, 30]; 
-
-const reduceAulas = aulas2.reduce((acumulador, item) => {
-  return acumulador + item
+const valorTotal = compras.reduce((acumulador, item) => {
+    const preco = +item.preco.replace('R$', '').replace(',' , '.');
+    return preco + acumulador
 }, 0)
 
-console.log(reduceAulas);
-
-const numeros2  = [2, 40, 13, 22, 37]
-
-const maiorNumero = numeros2.reduce((acumulador, item) => {
-  if(acumulador > item) {
-    return acumulador;
-  } else {
-    return item;
-  }
-})
-
-console.log(maiorNumero)
-
-const listaAulas = aulas.reduce((acumulador, item, index) => {
-  acumulador[index] = item.nome;
-  return acumulador;
-}, {})
-
-console.log(listaAulas)
-
-// some
-
-const frutas = ['Banana', 'Pêra', 'Uva'];
-
-const temUva = frutas.some((item) => {
-  return item === 'Uva'
-})
-
-console.log(temUva);
-
-// every 
-
-const every = frutas.every((item) => {
-  return item === 'Uva'
-})
-
-console.log(every)
-
-// find 
-
-const indexUva = frutas.findIndex((item) => { 
-  return item == 'Uva'
-})
-
-console.log('index:',indexUva)
-
-// filter 
-
-const frutas1 = ['Banana', undefined, null, '', 'Cereja', 0 ,'Abacaxi']
-
-const arrayFrutas = frutas.filter((item) => {
-  return item;
-})
-
-console.log(arrayFrutas)
-
-const maiores15 = aulas.filter((item) => {
-  return item.min > 15;
-})
-
-console.log(maiores15)
+console.log(valorTotal)
