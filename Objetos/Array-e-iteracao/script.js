@@ -84,3 +84,21 @@ const listaAulas = aulas.reduce((acumulador, item, index) => {
 }, {})
 
 console.log(listaAulas)
+
+// some
+
+const frutas = ['Banana', 'Pêra', 'Uva'];
+
+const temUva = frutas.some((item) => {
+  return item === 'Uva'
+})
+
+console.log(temUva);
+
+// every 
+
+const every = frutas.every((item) => {
+  return item === 'Uva'
+})
+
+console.log(every)
