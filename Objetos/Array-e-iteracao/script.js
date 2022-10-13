@@ -110,3 +110,19 @@ const indexUva = frutas.findIndex((item) => {
 })
 
 console.log('index:',indexUva)
+
+// filter 
+
+const frutas1 = ['Banana', undefined, null, '', 'Cereja', 0 ,'Abacaxi']
+
+const arrayFrutas = frutas.filter((item) => {
+  return item;
+})
+
+console.log(arrayFrutas)
+
+const maiores15 = aulas.filter((item) => {
+  return item.min > 15;
+})
+
+console.log(maiores15)
