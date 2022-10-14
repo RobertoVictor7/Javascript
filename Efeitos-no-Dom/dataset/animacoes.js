@@ -1,6 +1,6 @@
 function initTabNav() {
-const tabMenu = document.querySelectorAll(".js-tabmenu li");
-const tabContent = document.querySelectorAll(".js-tabcontent section");
+const tabMenu = document.querySelectorAll('[data-tab="menu"] li');
+const tabContent = document.querySelectorAll('[data-tab="content"] section');
 
 if (tabMenu.length && tabContent.length) {
   tabContent[0].classList.add('ativo')
@@ -10,7 +10,8 @@ if (tabMenu.length && tabContent.length) {
       item.classList.remove("ativo");
     });
 
-    tabContent[index].classList.add("ativo");
+    const direcao = tabContent[index].dataset.anime;
+    tabContent[index].classList.add("ativo", direcao);
   }
 
   tabMenu.forEach((item, index) => {
@@ -26,7 +27,7 @@ if (tabMenu.length && tabContent.length) {
 initTabNav();
 
 function initAccordion(){
-const faqTitle = document.querySelectorAll('.js-faqlista dt');
+const faqTitle = document.querySelectorAll('[data-faq="lista"] dt');
 
 if(faqTitle.length) {
 faqTitle[0].nextElementSibling.classList.add('ativo')
@@ -44,7 +45,7 @@ faqTitle.forEach((item) => {
 initAccordion()
 
 function initScrollSuave() {
-const linksInternos = document.querySelectorAll('.js-menu a[href^="#"]');
+const linksInternos = document.querySelectorAll('[data-tab="menu"] a[href^="#"]');
 
 function scrollToSection(event) {
   event.preventDefault();
@@ -72,7 +73,7 @@ linksInternos.forEach((item => {
 initScrollSuave();
 
 function initAnimacaoScroll() {
-const sections = document.querySelectorAll('.js-scroll')
+const sections = document.querySelectorAll('[data-tab="scroll"]')
 if(sections.length) {
 const windowMetade = window.innerHeight * 0.6
 

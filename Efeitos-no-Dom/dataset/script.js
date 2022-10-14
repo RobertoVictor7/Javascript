@@ -1,5 +1,13 @@
-const h1 = document.querySelector('[data-cor]');
+// Adicione um atributo data-anime="show-down" e
+// data-anime="show-right" a todos as section's
+// com descricão dos animais.
 
-console.log(Object.prototype.toString.call(h1))
+// Utilizando estes atributos, adicione a classe
+// show-down ou show-right a sua respectiva section
+// assim que a mesma aparecer na tela (animacao tab)
 
-console.log(h1.dataset)
+// No CSS faça com que show-down anime de cima para baixo
+// e show-right continue com a mesma animação da esquerda
+// para a direita
+
+// Substitua todas as classes js- por data atributes.

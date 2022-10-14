@@ -11,8 +11,8 @@
 </head>
 
 <body>
-    <div data-cor="azul" data-width="500">Uma Div</div>
-    <nav class="menu js-menu">
+    
+    <nav class="menu" data-tab="menu">
         <ul>
             <li><a href="#animais"> Animais</a></li>
             <li><a href="#faq">Faq</a></li>
@@ -20,9 +20,9 @@
         </ul>
     </nav>
 
-    <section class="grid-section animais js-scroll" id="animais">
+    <section class="grid-section animais" data-tab="scroll" id="animais">
         <h1 class="titulo">Animais Fantásticos</h1>
-        <ul class="animais-lista js-tabmenu">
+        <ul class="animais-lista" data-tab="menu">
             <li>
                 <img src="img/imagem1.jpg" alt="">
             </li>
@@ -42,20 +42,20 @@
                 <img src="img/imagem6.jpg" alt="">
             </li>
         </ul>
-        <div class="animais-descricao js-tabcontent">
-            <section>
+        <div class="animais-descricao" data-tab="content">
+            <section data-anime = "show-right">
                 <h2>Raposa</h2>
                 <p>Raposas são pequenos a médios mamíferos onívoros pertencentes a vários gêneros da família Canidae. As
                     raposas têm o crânio achatado, orelhas triangulares verticais, focinho pontiagudo e ligeiramente
                     arrebitado e uma cauda longa e espessa.</p>
             </section>
-            <section>
+            <section data-anime = "show-down">
                 <h2>Esquilo</h2>
                 <p>Os esquilos pertencem a uma grande família de mamíferos roedores, de pequeno e médio porte, conhecida
                     como Sciuridae. No Brasil, são também conhecidos como serelepe, caxinguelê, caxinxe, quatimirim,
                     quatipuru, agutipuru ou acutipuru. Na Galiza e em algumas zonas de Portugal, também são conhecido
                     por esquio.</p>
-            </section>
+            </section data-anime = "show-right">
             <section>
                 <h2>Urso</h2>
                 <p>Os Ursos (latim científico: Ursidae) constituem uma família de mamíferos plantígrados, geralmente de
@@ -64,7 +64,7 @@
                     garras não retráteis. Os ursídeos são geralmente animais omnívoros, mas se alimentam principalmente
                     de carne.</p>
             </section>
-            <section>
+            <section data-anime = "show-down">
                 <h2>Lobo</h2>
                 <p>O lobo (também chamado de lobo-cinzento; nome científico: Canis lupus) é uma espécie de mamífero
                     canídeo do gênero Canis. É um sobrevivente da Era do Gelo, originário do Pleistoceno Superior, cerca
@@ -72,14 +72,14 @@
                     de DNA e estudos genéticos reafirmam que o lobo-cinzento é ancestral do cão doméstico (Canis lupus
                     familiaris), contudo alguns aspectos desta afirmação têm sido questionados recentemente.</p>
             </section>
-            <section>
+            <section data-anime = "show-right">
                 <h2>Macaco</h2>
                 <p>Macaco é um termo de origem africana (provavelmente do banto makako) utilizado como designação comum
                     a todas as espécies de símios ou primatas antropoides. É aplicada restritivamente no Brasil aos
                     cebídeos (ou macacos do Novo Mundo) em geral. No sentido estrito, "macaco" refere-se às espécies de
                     primatas pertencentes ao género Macaca.</p>
             </section>
-            <section>
+            <section data-anime = "show-down">
                 <h2>Leão</h2>
                 <p>O leão (nome científico: Panthera leo) é uma espécie de mamífero carnívoro do gênero Panthera e da
                     família Felidae. A espécie é atualmente encontrada na África subsaariana e na Ásia, com uma única
@@ -92,9 +92,9 @@
             </section>
         </div>
     </section>
-    <section class="grid-section faq js-scroll" id="faq">
+    <section class="grid-section faq" data-tab="scroll" id="faq">
         <h1 class="titulo">FAQ</h1>
-        <dl class="faq-lista js-faqlista">
+        <dl class="faq-lista" data-faq="lista">
             <dt>Qual a idade dos animais?</dt>
             <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae necessitatibus</dd>
             <dt>Eles são Fantásticos?</dt>
@@ -105,7 +105,7 @@
             <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae necessitatibus quidem ratione!</dd>
         </dl>
     </section>
-    <section class="grid-section contato js-scroll" id="contato">
+    <section class="grid-section contato" data-tab="scroll" id="contato">
         <h1 class="titulo">Contato</h1>
         <div class="mapa">
             <img src="img/mapa.png" alt="">

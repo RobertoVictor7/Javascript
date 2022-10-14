@@ -214,29 +214,48 @@ body {
     }
 }
 
-.js .js-tabcontent section {
+.js [data-tab="content"] section {
     display: none;
 }
 
-.js-tabcontent section.ativo {
+[data-tab="content"] section.ativo {
     display: block;
-    animation: show .5s forwards
+
 }
 
-.js-faqlista dd {
+[data-tab="content"] section.ativo.show-right {
+    animation: show-right .5s forwards
+}
+
+[data-tab="content"] section.ativo.show-down {
+    animation: show-down .5s forwards
+}
+
+[data-faq="lista"] dd {
     display: none;
 }
 
-.js-faqlista dd.ativo {
+[data-faq="lista"] dd.ativo {
     display: block;
     animation: slidedown .5s forwards
 }
 
 
-@keyframes show {
+@keyframes show-right {
     from {
         opacity: 0;
         transform: translate3d(-50px, 0, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes show-down {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -30px, 0);
     }
     to {
         opacity: 1;
@@ -255,13 +274,13 @@ body {
     }
 }
 
-.js .js-scroll {
+.js [data-tab="scroll"] {
     opacity: 0;
     transform: translate3d(-30px, 0, 0);
     transition: .3s;
 }
 
-.js .js-scroll.ativo {
+.js [data-tab="scroll"].ativo {
     opacity: 1;
     transform: translate3d(0, 0, 0);
 }
