@@ -1,6 +1,6 @@
 import outsideClick from "./outside-click.js";
 
-export default function initMenuMobile() {}
+export default function initMenuMobile() {
 
 const menuButton = document.querySelector('[data-menu="button"]');
 const menuList = document.querySelector('[data-menu="list"]');
@@ -15,7 +15,7 @@ function openMenu(event) {
  })
 }
 
-eventos.forEach((evento) => {
-    menuButton.addEventListener(evento, openMenu);
-})
+eventos.forEach(evento => menuButton.addEventListener(evento, openMenu));
+
+}
 
