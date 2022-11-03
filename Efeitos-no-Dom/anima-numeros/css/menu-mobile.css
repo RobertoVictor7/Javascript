@@ -1,0 +1,58 @@
+.menu-mobile {
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .js .menu-mobile {
+        display: flex;
+        align-items: center;
+        background: #222;
+        border: none;
+        padding: .5rem 1rem;   
+        border-radius: 4px;
+        text-transform: uppercase;
+        font-family: monospace;
+        font-weight: bold;
+        color: #fff;
+        cursor: pointer;
+        margin: 10px;
+        position: relative;
+        z-index: 300;
+    }
+
+    .js .menu-mobile.active::before {
+        transform: rotate(90deg);
+    }
+
+    .js .menu-mobile::before {
+        margin-right: 4px;
+        content: '';
+        display: inline-block;
+        height: 2px;
+        width: 12px;
+        background: #fff;
+        box-shadow: 0 4px #fff, 0 -4px #fff;
+        transition: transform .3s;
+    }
+
+    .js .menu-list {
+        display: none;
+        position: absolute;
+        background-color: #FB5;
+        max-width: 200px;
+        z-index: 200;
+        padding: 60px 0 20px 0;
+        top: 0;
+        box-shadow: 2px 2px 2px 0 rgba(0,0,0, .2);
+    }
+
+    .js .menu-list.active {
+        display: block;
+        animation: show-right .3s forwards;
+    }
+
+    .js .dropdown-menu {
+        position: static;
+        border: none;
+    }
+}

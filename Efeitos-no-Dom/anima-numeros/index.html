@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Animais Fantásticos</title>
+    <script>document.documentElement.className += ' js'</script>
+</head>
+
+<body>
+    <div class="grid-container">
+    <nav class="menu" data-tab="menu">
+        <button class="menu-mobile" data-menu="button" aria-expanded="false" aria-controls="menu">Menu</button>
+        <ul class="menu-list" data-menu="list" id="menu">
+            <li><a href="#animais"> Animais</a></li>
+            <li data-dropdown>
+                <a href="sobre.html">Sobre</a>
+                <ul class="dropdown-menu">
+                    <li><a href="empresa.html">A Empresa</a></li>
+                    <li><a href="equipe.html">Equipe</a></li>
+                    <li><a href="socios.html">Sócios</a></li>
+                    <li><a href="investidores.html">Investidores</a></li>
+                </ul>
+            </li>
+            <li><a href="#faq">Faq</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li><a data-modal="abrir" href="login.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <section class="grid-section animais" data-tab="scroll" id="animais">
+        <h1 class="titulo">Animais Fantásticos</h1>
+        <ul class="animais-lista" data-tab="menu">
+            <li>
+                <img src="img/imagem1.jpg" alt="">
+            </li>
+            <li>
+                <img src="img/imagem2.jpg" alt="">
+            </li>
+            <li>
+                <img src="img/imagem3.jpg" alt="">
+            </li>
+            <li>
+                <img src="img/imagem4.jpg" alt="">
+            </li>
+            <li>
+                <img src="img/imagem5.jpg" alt="">
+            </li>
+            <li>
+                <img src="img/imagem6.jpg" alt="">
+            </li>
+        </ul>
+        <div class="animais-descricao" data-tab="content">
+            <section data-anime = "show-right">
+                <h2>Raposa</h2>
+                <p>Raposas são pequenos a médios mamíferos onívoros pertencentes a vários gêneros da família Canidae. As
+                    raposas têm o crânio achatado, orelhas triangulares verticais, focinho pontiagudo e ligeiramente
+                    arrebitado e uma cauda longa e espessa.</p>
+            </section>
+            <section data-anime = "show-down">
+                <h2>Esquilo</h2>
+                <p>Os esquilos pertencem a uma grande família de mamíferos roedores, de pequeno e médio porte, conhecida
+                    como Sciuridae. No Brasil, são também conhecidos como serelepe, caxinguelê, caxinxe, quatimirim,
+                    quatipuru, agutipuru ou acutipuru. Na Galiza e em algumas zonas de Portugal, também são conhecido
+                    por esquio.</p>
+            </section data-anime = "show-right">
+            <section>
+                <h2>Urso</h2>
+                <p>Os Ursos (latim científico: Ursidae) constituem uma família de mamíferos plantígrados, geralmente de
+                    grande porte, contendo os ursos e os pandas. </p>
+                <p>Algumas características comuns dos ursos são pelagem espessa, rabo curto, o olfato desenvolvido e as
+                    garras não retráteis. Os ursídeos são geralmente animais omnívoros, mas se alimentam principalmente
+                    de carne.</p>
+            </section>
+            <section data-anime = "show-down">
+                <h2>Lobo</h2>
+                <p>O lobo (também chamado de lobo-cinzento; nome científico: Canis lupus) é uma espécie de mamífero
+                    canídeo do gênero Canis. É um sobrevivente da Era do Gelo, originário do Pleistoceno Superior, cerca
+                    de 300 mil anos atrás. É o maior membro remanescente selvagem da família canidae. O sequenciamento
+                    de DNA e estudos genéticos reafirmam que o lobo-cinzento é ancestral do cão doméstico (Canis lupus
+                    familiaris), contudo alguns aspectos desta afirmação têm sido questionados recentemente.</p>
+            </section>
+            <section data-anime = "show-right">
+                <h2>Macaco</h2>
+                <p>Macaco é um termo de origem africana (provavelmente do banto makako) utilizado como designação comum
+                    a todas as espécies de símios ou primatas antropoides. É aplicada restritivamente no Brasil aos
+                    cebídeos (ou macacos do Novo Mundo) em geral. No sentido estrito, "macaco" refere-se às espécies de
+                    primatas pertencentes ao género Macaca.</p>
+            </section>
+            <section data-anime = "show-down">
+                <h2>Leão</h2>
+                <p>O leão (nome científico: Panthera leo) é uma espécie de mamífero carnívoro do gênero Panthera e da
+                    família Felidae. A espécie é atualmente encontrada na África subsaariana e na Ásia, com uma única
+                    população remanescente em perigo, no Parque Nacional da Floresta de Gir, Gujarat, Índia. Foi extinto
+                    na África do Norte e no Sudoeste Asiático em tempos históricos, e até o Pleistoceno Superior, há
+                    cerca de 10 000 anos, era o mais difundido grande mamífero terrestre depois dos humanos, sendo
+                    encontrado na maior parte da África, em muito da Eurásia, da Europa Ocidental à Índia, e na América,
+                    do Yukon ao México. É uma dos quatro grandes felinos, com alguns machos excedendo 250 quilogramas em
+                    peso, sendo o segundo maior felino recente depois do tigre.</p>
+            </section>
+        </div>
+    </section>
+    <section class="grid-section faq" data-tab="scroll" id="faq">
+        <h1 class="titulo">FAQ</h1>
+        <dl class="faq-lista" data-faq="lista">
+            <dt>Qual a idade dos animais?</dt>
+            <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae necessitatibus</dd>
+            <dt>Eles são Fantásticos?</dt>
+            <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit.</dd>
+            <dt>Qual a diferença?</dt>
+            <dd>Lorem ipsum adipisicing elit. Molestiae necessitatibus quidem ratione!</dd>
+            <dt>Como Proteger?</dt>
+            <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae necessitatibus quidem ratione!</dd>
+        </dl>
+    </section>
+
+    <section class="grid-section numeros" data-tab="scroll">
+        <h1 class="titulo">Numeros</h1>
+        <div class="numeros-grid">
+            <div class="numero-animal">
+                <h3>Lobos</h3>
+                <span data-numero>4874</span>
+            </div>
+            <div class="numero-animal">
+                <h3>Raposa</h3>
+                <span data-numero>5374</span>
+            </div>
+            <div class="numero-animal">
+                <h3>Esquilos</h3>
+                <span data-numero>12340</span>
+            </div>
+            <div class="numero-animal">
+                <h3>Ursos</h3>
+                <span data-numero>8442</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="grid-section contato" data-tab="scroll" id="contato">
+        <h1 class="titulo">Contato</h1>
+        <div class="mapa" data-tooltip aria-label="Endereço próximo ao estacionamento.">
+            <img src="img/mapa.png" alt="">
+        </div>
+        <ul class="dados">
+            <li>robertovictor0702@gmail.com</li>
+            <li>+55 (11) 97317-1480</li>
+        </ul>
+    </section> 
+    <footer class="copy">
+        <p>Todos os direitos reservados.</p>
+    </footer>
+</div>
+    <section class="modal-container" data-modal="container">
+        <div class="modal">
+            <button data-modal="fechar" class="fechar">X</button>
+            <form action="">
+                <label for="email">Email</label>
+                <input type="text" for="email" id="email">
+                <label for="senha">Senha</label>
+                <input type="password" for="senha" id="senha">
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+    </section>
+    
+    <script type="module" src="js/script.js"></script>
+</body>
+
+</html>
