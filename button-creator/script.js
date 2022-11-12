@@ -19,6 +19,9 @@ const handleStyle = {
     width(value){
         this.element.style.width = value + 'px';
     },
+    padding(value) {
+        this.element.style.padding = value + 'px';
+    },
     border(value) {
         this.element.style.border = value + 'px solid'
     },
@@ -27,6 +30,9 @@ const handleStyle = {
     },
     fontFamily(value) {
         this.element.style.fontFamily = value;
+    },
+    textTransform(value) {
+        this.element.style.textTransform = value;
     },
     fontSize(value){
         this.element.style.fontSize = value + 'px';
