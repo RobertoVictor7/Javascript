@@ -27,6 +27,7 @@ input {
     padding: 1rem;
     border-radius: 4px;
     box-shadow: 2px 2px 2px 0 rgba(0, 0 , 0, .1);
+    max-width: 300px;
 }
 
 .css {
@@ -41,4 +42,15 @@ input {
     display: block;
     margin-bottom: .5rem;
     font-size:1.2rem;
+}
+
+@media(max-width: 480px) {
+    .button-creator {
+        grid-template-columns: 1fr;
+    }
+
+    .css {
+        max-width: 300px;
+        overflow: scroll;
+    }
 }
