@@ -3,7 +3,7 @@ body {
     background-color: #ccc;
 }
 
-label{
+label, .clearData{
     display: block;
     margin-bottom: .5rem;
     margin-top: 1rem;
