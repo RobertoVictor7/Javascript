@@ -6,8 +6,8 @@ async function fetchBitcoin(url) {
     const bitcoinJson = await bitcoinResponse.json();
     const btcPreco = document.querySelector(".btc-preco");
     btcPreco.innerText = (1000 / bitcoinJson.BRL.sell).toFixed(4);
-  } catch {
-    console.log('erro ao calcular bitcoin');
+  } catch(err) {
+    console.log(err);
   }
 }
 
